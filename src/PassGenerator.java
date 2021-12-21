@@ -14,7 +14,7 @@ public class PassGenerator {
 		So when we multiply Math.random() by 78, we do this because there are 26 lowercase letters,
 		26 uppercase letters, 10 numbers, and 16 special characters. (26 + 26 + 10 + 16 = 78)*/
 		
-		//This random number has values between 0 (inclusive) and 62 (exclusive)
+		//This random number has values between 0 (inclusive) and 79 (exclusive)
 		int rand = (int)(Math.random()*78);
 		
 		
@@ -22,7 +22,7 @@ public class PassGenerator {
 			//Number (32-47 in ASCII)
 			//To convert from 0-15 to 32-47, we can add 32 to rand because 32-0 = 32
 			int symbol = rand + 32;
-			//This way, rand = 0 => number = 48 => '0'
+			//This way, rand = 0 => symbol = 48 => '0'
 			return (char)(symbol);
 		} else if(rand > 15 || rand <= 25) {
 			//Uppercase letter (65-90 in ASCII)
